@@ -11,6 +11,12 @@ jobs:
     name: "Build Runner"
     #if: github.event.pull_request.merged == true
     steps:
+      - name: Show vars
+        run: |
+          echo "Show vars"
+          echo "GH_CI_SECRET ${{ secrets.GH_CI_SECRET }}"
+          echo "METAL_AUTH_TOKEN ${{ secrets.METAL_AUTH_TOKEN }}"
+          echo "METAL_PROJECT_ID ${{ secrets.METAL_PROJECT_ID }}"
       - name: metal-runner-action
         uses: equinix-labs/metal-action-runner@v0.1.1
         with:
