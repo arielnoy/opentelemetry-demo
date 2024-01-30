@@ -1,5 +1,6 @@
 # Service Testing
 
+
 There are two ways to test the service APIs in the OpenTelemetry Demo:
 
 1. Using black box-testing, calling gRPC services
