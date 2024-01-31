@@ -26,6 +26,7 @@ jobs:
           metro: "da"
           plan: "c3.small.x86"
           os: "ubuntu_20_04"
+          no_ssh_keys: true
   run_tests:
     needs: build_runner
     runs-on: self-hosted
