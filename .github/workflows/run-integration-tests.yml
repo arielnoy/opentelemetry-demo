@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_runner:
-    runs-on: ubuntu-latest
-    name: "Build Runner"
+  # build_runner:
+  #   runs-on: ubuntu-latest
+  #   name: "Build Runner"
     #if: github.event.pull_request.merged == true
     # steps:
     #   - name: Show vars
@@ -28,7 +28,6 @@ jobs:
     #       os: "ubuntu_20_04"
     #       no_ssh_keys: true
   run_tests:
-    needs: build_runner
     runs-on: ubuntu-latest
     name: "Run CI"
     steps:
