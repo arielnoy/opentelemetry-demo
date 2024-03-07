@@ -57,6 +57,8 @@ public class CartService : Oteldemo.CartService.CartServiceBase
         var activity = Activity.Current;
         activity?.SetTag("app.user.id", request.UserId);
         activity?.AddEvent(new("Empty cart"));
+        // Ariel Demo # add sleep 30 seconds
+        await Task.Delay(3000);
 
         try
         {

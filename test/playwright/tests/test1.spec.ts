@@ -14,7 +14,7 @@ for (let i = 0; i < 10; i++) {
     await page.locator('#email').fill('ariel'+i+'@gmail.com');
     await page.locator('#email').press('Tab');
     await page.getByRole('button', { name: 'Place Order' }).click();
-    await expect(page.getByText('Your order is complet11e!')).toBeAttached();
+    await expect(page.getByText('Your order is complete!')).toBeAttached();
     
   });
 

@@ -7,9 +7,7 @@ echo "Sleep 30"
 sleep 20
 cd /Users/arielnoy/test/opentelemetry-demo/test/playwright
 
-tar cf - . | ssh -i ~/.ssh/Ariel_PlayGround.pem ubuntu@51.16.7.133 "rm -rf test/genci ; mkdir -p  test/genci ; cd test/genci; rm tests/._test* ; rm ._* ; tar xf -"
-
-npx playwright test test2.spec.ts
+tar cf - . | ssh  -i ~/.ssh/Ariel_PlayGround.pem ubuntu@51.16.7.133 "source ~/.nvm/nvm.sh;rm -rf test/genci ; mkdir -p  test/genci ; cd test/genci;  tar xf - 2>/dev/null ; rm tests/._test* ; rm ._* ; echo 'Start test' ; npx playwright test test2.spec.ts "
 sleep 40
 cd /Users/arielnoy/test/opentelemetry-demo/test/analyze
 npm run remote
