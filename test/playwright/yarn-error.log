@@ -1,0 +1,47 @@
+Arguments: 
+  /Users/arielnoy/.nvm/versions/node/v20.1.0/bin/node /usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js install
+
+PATH: 
+  /Users/arielnoy/.nvm/versions/node/v20.1.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/private/var/folders/d4/zmw958l510z9jbmg_dgfk7y00000gr/T/_MEIT5pwPh/mac/aws-cli:/private/var/folders/d4/zmw958l510z9jbmg_dgfk7y00000gr/T/_MEI8ktKdD/mac/sessionmanagerplugin/bin:/private/var/folders/d4/zmw958l510z9jbmg_dgfk7y00000gr/T/_MEIT5pwPh/mac/aws-cli:/private/var/folders/d4/zmw958l510z9jbmg_dgfk7y00000gr/T/_MEI8ktKdD/mac/sessionmanagerplugin/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.1.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error [ERR_SOCKET_CONNECTION_TIMEOUT]: Socket connection timeout
+      at new NodeError (node:internal/errors:399:5)
+      at internalConnectMultiple (node:net:1099:20)
+      at Timeout.internalConnectMultipleTimeout (node:net:1638:3)
+      at listOnTimeout (node:internal/timers:575:11)
+      at process.processTimers (node:internal/timers:514:7)
+
+npm manifest: 
+  {
+    "name": "playwright",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {},
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@playwright/test": "^1.41.2",
+      "@types/node": "^20.11.17"
+    },
+    "dependencies": {
+      "node-fetch": "^3.3.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

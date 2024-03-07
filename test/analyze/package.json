@@ -1,0 +1,25 @@
+{
+  "name": "analyze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node  --experimental-modules --loader ts-node/esm index.mjs",
+    "remote": "node  --experimental-modules --loader ts-node/esm index.mjs 3.141.74.185:30846",
+    "remote-il": "node  --experimental-modules --loader ts-node/esm index.mjs localhost:30846",
+    "parse": "node  --experimental-modules --loader ts-node/esm parse.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "xregexp": "^5.1.1"
+  }
+}
