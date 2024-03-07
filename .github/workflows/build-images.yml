@@ -6,6 +6,8 @@ on:
     paths:
       - 'src/**'
       - 'test/**'
+  workflow_dispatch:
+      
   workflow_call:
     inputs:
       push:
