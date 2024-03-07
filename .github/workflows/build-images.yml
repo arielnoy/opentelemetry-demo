@@ -19,7 +19,7 @@ on:
         default: 'dev'
         required: false
         type: string
-      
+
   workflow_call:
     inputs:
       push:
