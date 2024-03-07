@@ -150,3 +150,8 @@ test/analyze/backup_us/data.1709572716325.csv
 test/analyze/backup_us/data.1709572716325.json
 test/analyze/backup_us/data.1709575200360.json
 test/analyze/backup_us/data.csv
+restart-ariel.sh
+restart-remote-il.sh
+restart-remote.sh
+restart-service.sh
+restart-services-kube.sh
