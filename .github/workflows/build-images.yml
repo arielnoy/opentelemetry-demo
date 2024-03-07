@@ -42,7 +42,7 @@ jobs:
 
     env:
       RELEASE_VERSION: "${{ github.event.release.tag_name }}"
-      DOCKERHUB_REPO: "otel/demo"
+      DOCKERHUB_REPO: "arielnoy/ariel_otel_demo"
       GHCR_REPO: "ghcr.io/open-telemetry/demo"
 
     strategy:
