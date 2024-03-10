@@ -159,7 +159,9 @@ public class RedisCartStore : ICartStore
 
             // Update the cache with empty cart for given user
             await db.HashSetAsync(userId, new[] { new HashEntry(CartFieldName, _emptyCartBytes) });
-            await db.KeyExpireAsync(userId, TimeSpan.FromMinutes(60));
+            //await db.KeyExpireAsync(userId, TimeSpan.FromMinutes(60));
+            await db.KeyExpireAsync(userId, TimeSpan.FromMilliseconds(1));
+
         }
         catch (Exception ex)
         {
