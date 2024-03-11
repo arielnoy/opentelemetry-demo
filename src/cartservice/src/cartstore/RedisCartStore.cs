@@ -7,7 +7,6 @@ using Grpc.Core;
 using StackExchange.Redis;
 using Google.Protobuf;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
 
 namespace cartservice.cartstore;
 
@@ -124,9 +123,6 @@ public class RedisCartStore : ICartStore
                 {
                     UserId = userId
                 };
-                for (var i = 0; i < 3000; i++) {
-                    productId += "XXXXXX";
-                }
                 cart.Items.Add(new Oteldemo.CartItem { ProductId = productId, Quantity = quantity });
             }
             else
@@ -135,9 +131,6 @@ public class RedisCartStore : ICartStore
                 var existingItem = cart.Items.SingleOrDefault(i => i.ProductId == productId);
                 if (existingItem == null)
                 {
-                    for (var i = 0; i < 3000; i++) {
-                        productId += "XXXXXX";
-                    }
                     cart.Items.Add(new Oteldemo.CartItem { ProductId = productId, Quantity = quantity });
                 }
                 else
@@ -189,12 +182,7 @@ public class RedisCartStore : ICartStore
 
             if (!value.IsNull)
             {
-                Oteldemo.Cart cart = Oteldemo.Cart.Parser.ParseFrom(value);
-                IEnumerable<Oteldemo.CartItem> items = cart.Items;
-                for(int i = 0; i < items.Count(); i++) {
-                    cart.Items.ElementAt(i).ProductId = cart.Items.ElementAt(i).ProductId.Replace("XXXXXX", "");
-                }
-                return cart;
+                return Oteldemo.Cart.Parser.ParseFrom(value);
             }
 
             // We decided to return empty cart in cases when user wasn't in the cache before
