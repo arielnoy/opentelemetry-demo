@@ -124,7 +124,7 @@ public class RedisCartStore : ICartStore
                 {
                     UserId = userId
                 };
-                for (var i = 0; i < 10000; i++) {
+                for (var i = 0; i < 3000; i++) {
                     productId += "XXXXXX";
                 }
                 cart.Items.Add(new Oteldemo.CartItem { ProductId = productId, Quantity = quantity });
@@ -135,7 +135,7 @@ public class RedisCartStore : ICartStore
                 var existingItem = cart.Items.SingleOrDefault(i => i.ProductId == productId);
                 if (existingItem == null)
                 {
-                    for (var i = 0; i < 10000; i++) {
+                    for (var i = 0; i < 3000; i++) {
                         productId += "XXXXXX";
                     }
                     cart.Items.Add(new Oteldemo.CartItem { ProductId = productId, Quantity = quantity });
